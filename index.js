@@ -23,7 +23,7 @@ app.get('*',function(req,res){
     res.sendFile(path.join(__dirname,'./client/build/index.html'));
 })
 
-mongoose.connect(MONGO_URL
+mongoose.connect(process.env.MONGO_URL
     , { useNewUrlParser: true })
     .then(() => console.log("MongoDb is connected"))
     .catch(err => console.log(err))
