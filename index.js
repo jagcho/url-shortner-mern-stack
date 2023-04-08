@@ -26,7 +26,7 @@ app.get('*',function(req,res){
 mongoose.connect(process.env.MONGO_URL
     , { useNewUrlParser: true })
     .then(() => console.log("MongoDb is connected"))
-    .catch(err => console.log(err))
+    .catch(err => console.log(err));
 
 app.use("/", route)
 
